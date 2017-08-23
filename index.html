@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>Simon Möller</title>
+  	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Shojumaru" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+
+	</head>
+	<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <div>
+            <a href="#top" class="navbar-brand scrollable">
+              <div></div>
+              Simon Möller
+            </a>
+          </div>
+        </div>
+
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="margin-for-nav-btn">
+              <a id="about-link" class="navigation-btn scrollable" href="#about"> About me </a>
+            </li>
+            <li class="margin-for-nav-btn">
+              <a id="portfolio-link" class="navigation-btn scrollable" href="#portfolio"> Portfolio </a>
+            </li>
+            <li class="margin-for-nav-btn">
+              <a id="contact-link" class="navigation-btn scrollable" href="#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!------------------>
+
+    <!-- Intro -->
+    <div id="intro-text">Hi there stranger!<br>I'm Simon</div>
+    <canvas id="intro" style="background: black;"></canvas>
+    <!------------->
+
+    <!-- About -->
+    <section id="about">
+      <div class="content-body container-fluid text-center">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h3>
+              An up and coming developer, programmer and physicist currently studying Engineering Physics at The Royal Institute of Technology in Stockholm (KTH) and web development at freeCodeCamp.
+            </h3>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <a href="#top" class="scrollable"><img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAxcAAAAJGQxOTA5OWFkLWVmZjctNDY4Mi04NmUzLTMwZWE4M2MzNGE1MQ.jpg" alt="It's amee Mario!" class="img-circle mario"></a>
+          </div>
+        </div>
+
+        <div class="row end-line">
+          <div class="col-xs-5">
+            <hr>
+          </div>
+          <div class="col-xs-2">
+            &#8750
+          </div>
+          <div class="col-xs-5">
+            <hr>
+          </div>
+        </div>
+
+        <h3>
+          I also love to read so don't hesitate on emailing me book tips.
+        </h3>
+      </div>
+    </section>
+    <!------->
+
+    <!-- portfolio -->
+    <section id="portfolio">
+      <div class="content-body">
+
+        <div id="portfolio-headline">
+          <h1><b>Portfolio</b></h1>
+          <div class="row end-line">
+            <div class="col-xs-5">
+              <hr>
+            </div>
+            <div class="col-xs-2">
+              &#8750
+            </div>
+            <div class="col-xs-5">
+              <hr>
+            </div>
+          </div>
+        </div>
+        <!-- Carousel -->
+        <div id="portfolio-carousel" class="carousel slide" data-interval="false">
+
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#portfolio-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#portfolio-carousel" data-slide-to="1"></li>
+            <li data-target="#portfolio-carousel" data-slide-to="2"></li>
+            <li data-target="#portfolio-carousel" data-slide-to="3"></li>
+          </ol>
+
+          <!-- Images -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <a href="#" class="hover-caption">
+                Here I will give a short description of the project and reveal what skills were used in the making of it. 1
+              </a>
+              <img src="http://strmstr.com/images/coming-soon.png" alt="placeholder">
+              <div class="carousel-caption">
+                <i>This is where the name of the project will be.</i>
+              </div>
+            </div>
+            <div class="item">
+              <a href="#" class="hover-caption">
+                Here I will give a short description of the project and reveal what skills were used in the making of it. 2
+              </a>
+              <img src="http://strmstr.com/images/coming-soon.png" alt="placeholder">
+              <div class="carousel-caption">
+                <i>This is where the name of the project will be.</i>
+              </div>
+            </div>
+            <div class="item">
+              <a href="#" class="hover-caption">
+                Here I will give a short description of the project and reveal what skills were used in the making of it. 3
+              </a>
+              <img src="http://strmstr.com/images/coming-soon.png" alt="placeholder">
+              <div class="carousel-caption">
+                <i>This is where the name of the project will be.</i>
+              </div>
+            </div>
+            <div class="item">
+              <a href="#" class="hover-caption">
+                Here I will give a short description of the project and reveal what skills were used in the making of it. 4
+              </a>
+              <img src="http://strmstr.com/images/coming-soon.png" alt="placeholder">
+              <div class="carousel-caption">
+                <i>This is where the name of the project will be.</i>
+              </div>
+            </div>
+          </div><!-- carousel-inner-->
+
+          <!-- controls -->
+          <a class="left carousel-control" data-slide="prev" href="#portfolio-carousel">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" data-slide="next" href="#portfolio-carousel">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div><!-- carousel -->
+
+        <!-- The content is set with javascript -->
+        <div id="mobile-description"></div>
+
+      </div><!-- content-body -->
+    </section><!-- portfolio -->
+    <!-------->
+
+    <!-- contact -->
+    <section id="contact">
+      <div class="content-body container-fluid">
+        <!-- headline -->
+        <div id="contact-headline">
+          <h1><b>Contact me</b></h1>
+          <div class="row end-line">
+            <div class="col-xs-5">
+              <hr>
+            </div>
+            <div class="col-xs-2">
+              &#8750
+            </div>
+            <div class="col-xs-5">
+              <hr>
+            </div>
+          </div>
+        </div><!-- headline -->
+
+        <div class="row">
+          <div id="how-to-get-in-touch" class="col-xs-8">
+            Whether it is to deep-talk about the carpets and the ceilings for a while, to have a nice chat over some tea, or one of the million things in between... Don't hesitate on getting in touch with me. Either via the links to the right or through the form down below.
+            <br><br>
+            I will answer as soon as possible!
+          </div>
+          <div class="col-xs-4">
+            <div id="social-media-links">
+              <a href="https://www.facebook.com/simon.moller.581" title="Facebook" target="_blank"><i class="fa fa-facebook-square"></i></a>
+              <a href="https://www.linkedin.com/in/simon-m%C3%B6ller-31875a139/" title="Linkedin" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+              <a href="https://github.com/simmol1997" title="Github" target="_blank"><i class="fa fa-github"></i></a>
+              <br>
+            </div>
+          </div>
+        </div> <!-- row -->
+
+        <div id="email-adress">
+          Want me to receive an email?
+          <br>
+          <span class="glyphicon glyphicon-envelope"> </span>
+          simmol1997@gmail.com
+        </div>
+
+        <div class="row end-line">
+          <div class="col-xs-5">
+            <hr>
+          </div>
+          <div class="col-xs-2">
+            &#8750
+          </div>
+          <div class="col-xs-5">
+            <hr>
+          </div>
+        </div>
+
+        <form action="mailto:simmol1997@gmail.com" method="post" enctype="text/plain" autocomplete="on" id="mail-form">
+          <div class="centered">
+            <div class="responsive-inline-layout">
+              <div class="usr-input">
+                <label id="name-label" for="name"> Name </label>
+                <br>
+                <input type="text" id="name" name="name" placeholder="Name" size="15" required>
+              </div>
+              <div class="usr-input">
+                <label id="email-label" for="email"> Email Address</label>
+                <br>
+                <input type="email" id="email" name="email" placeholder="Email Address" size="15" required>
+              </div>
+              <div class="usr-input">
+                <label id="tel-label" for="tel-number"> Phone Number </label>
+                <br>
+                <input type="tel" id="tel-number" name="tel-number" placeholder="Phone Number" size="15" required>
+              </div>
+            </div>
+            <div class="responsive-inline-layout">
+              <div class="usr-input">
+                <label id="message-label" for="message"> Message </label>
+                <br>
+                <textarea name="message" id="message" placeholder="Message" rows="7" required></textarea>
+              </div>
+            </div>
+          </div><!-- centered -->
+        </form>
+      </div>
+
+      <div class="room-for-submit-btn">
+        <div class="center-btn">
+          <input type="submit" form="mail-form" value="Send" id="submit-btn">
+        </div>
+      </div>
+    </section>
+    <!--------->
+
+    <footer>
+      <div class="no-copyright-necessary">
+        <strong>Copyleft <span class="copyleft">&copy</span> Simon Möller 2017. All Rites Reversed.</strong>
+      </div>
+    </footer>
+
+    <a class="back-to-the-top scrollable" href="#top">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+      <span class="sr-only">Back to the top</span>
+    </a>
+
+	</body>
+</html>

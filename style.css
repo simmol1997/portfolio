@@ -1,0 +1,393 @@
+/* specifying the go-to fonts to use*/
+body {
+  font-family: "open sans", "sans-serif";
+}
+
+/*----- css for navbar -----*/
+.navbar-default {
+  background: rgba(255,255,255,0.7);
+  border: 0px solid white;/*removes the bootstrap auto-generated border*/
+}
+.navbar-brand, .navbar-brand:hover {
+  /* has to be important because of the properties inside bootstraps navbar */
+  font-family: "shojumaru";
+  color: #8B4513 !important;
+  margin-top: 3px;
+  margin-left: 10px !important;
+  border: 1px outset brown;
+  background-color: #3a1d06 !important;
+  padding-top: 5px;
+} .navbar-brand:hover {
+  animation: wiggle 1700ms linear infinite;
+  -webkit-animation: wiggle 1700ms linear infinite;
+  transform-origin: 50% 5px;
+  -webkit-transform-origin: 50% 5px;
+}
+@keyframes wiggle {
+  0% {transform:rotate(0deg)}
+  25% {transform:rotate(5deg)}
+  75% {transform:rotate(-5deg)}
+  100% {transform:rotate(0deg)}
+}
+@-webkit-keyframes wiggle {
+  0% {-webkit-transform:rotate(0deg)}
+  25% {-webkit-transform:rotate(5deg)}
+  75% {-webkit-transform:rotate(-5deg)}
+  100% {-webkit-transform:rotate(0deg)}
+}
+.navbar-brand div {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  background-color: #e0dfdb;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+}
+.navigation-btn {
+  font-family: "permanent marker", "oswald";
+} .navigation-btn:hover {
+  animation: increase-width 300ms linear forwards;
+  -webkit-animation: increase-width 300ms linear forwards; /*for older safari users*/
+}
+@keyframes increase-width {
+  from {
+    letter-spacing: 0px;
+  }
+  to {
+    letter-spacing: 5px;
+    text-decoration: overline underline;
+  }
+}
+@-webkit-keyframes increase-width {
+  from {
+    letter-spacing: 0px;
+  }
+  to {
+    letter-spacing: 5px;
+    text-decoration: overline underline;
+    color: #4bb543;
+  }
+}
+.navigation-active {
+  background-color: slategrey !important;
+  color: white !important;
+}
+.margin-for-nav-btn {
+  margin-right: 10px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+/* ---------- */
+
+/* ---- backgrounds for all the sections ---- */
+#about {
+  background: url(http://i.dailymail.co.uk/i/pix/2015/12/30/14/2FADE7B800000578-0-image-a-32_1451485652414.jpg) no-repeat;
+  background-size: cover;
+}
+#portfolio {
+  background: url(http://allswalls.com/images/high-mountains-wallpaper-1.jpg) no-repeat;
+  background-size: cover;
+}
+#contact {
+  background: url(https://wallpaperbrowse.com/media/images/bcf39e88-5731-43bb-9d4b-e5b3b2b1fdf2.jpg) no-repeat;
+  background-size: cover;
+}
+/* ---------------- */
+
+/* ---- general stuff ---- */
+.content-body {
+  width: 60vw;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.end-line {
+  font-size: 30px;
+  color: black;
+  text-align: center;
+  margin: 10px;
+}
+hr {
+  border: 2px solid black;
+}
+.end-line div {
+  padding-left: 0;
+  padding-right: 0;
+}
+.back-to-the-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99; /* Make sure it does not overlap */
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: crimson;
+  text-align: center;
+  line-height: 45px;
+  font-size: 20px;
+}
+.responsive-inline-layout {
+  display: inline-table;
+  margin: 20px;
+}
+.centered {
+  display: table;
+  margin: auto;
+}
+/* ------- */
+
+/*---- Intro ---- */
+canvas {
+  /* This is needed due to the canvas being an inline element.
+  Found the tip here: https://stackoverflow.com/questions/9878090/eliminate-ghost-margin-below-html5-canvas-element */
+  vertical-align: bottom;
+}
+#intro-text {
+  font-family: "permanent marker";
+  font-size: 50px;
+  color: #edbbbb;
+  text-align: center;
+  position: absolute;
+  /*The position is set in JS*/
+}
+/* ------------ */
+
+/* ---- about ---- */
+#about .content-body {
+  margin-left: 40vw;
+  background: rgba(100,100,100,0.7);
+  color: white;
+}
+.test {
+  float: right;
+}
+.mario {
+  border: 7px double deepskyblue;
+}
+/* -------- */
+
+/* ---- portfolio ---- */
+#portfolio .content-body {
+  background: rgba(200,200,200,0.6);
+  margin-left: 0vw;
+  margin-right: 40vw;
+}
+#portfolio-headline {
+  font-family: "permanent marker";
+  color: rgb(50,50,50);
+  text-align: center;
+}
+#portfolio-carousel {
+  width: 56vw;
+  margin-left: 2vw;
+}
+.item img {
+  /* Centers the img both vertically and horizontally */
+  width: 100%;
+}
+.carousel-caption {
+  color: black;
+  font-size: 17px;
+}
+.hover-caption {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding-top: 25%;
+  text-align: center;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  font-size: 17px;
+  background: rgba(119,136,153,0.5);
+  opacity: 0;
+} .hover-caption:hover {
+  opacity: 1;
+  color: black;
+  text-decoration: none;
+} .hover-caption:hover ~ .carousel-caption {
+  opacity: 0;
+}
+.carousel-indicators li{
+  background: #0d96b6;
+  border-color: #333;
+}
+#mobile-description {
+  border: 2px solid slategrey;
+  padding: 5px;
+  width: 300px;
+  margin: auto;
+  margin-top: 0;
+  opacity: 0;
+  height: 0;
+}
+/* ---------- */
+
+/* ---- contact ---- */
+#contact .content-body {
+  margin-left: 20vw;
+  margin-right: 20vw;
+  background: rgba(255,255,255,0.5);
+  color: black;
+}
+#contact-headline {
+  font-family: "permanent marker";
+  text-align: center;
+}
+#how-to-get-in-touch {
+  font-size: 20px;
+}
+#social-media-links {
+  font-size: 40px;
+  text-align: center;
+} .fa {
+  display: block;
+  margin-top: 10px;
+} #social-media-links a:hover {
+  /* The display:block property makes the text-decorations appear. This removes that behaviour. */
+  text-decoration: none;
+}
+#email-adress {
+  border: 2px outset slategrey;
+  padding: 5px;
+  margin: auto;
+  width: 250px;
+  margin-top: 20px;
+}
+.usr-input {
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: white;
+  opacity: 0.5;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: white;
+  opacity: 0.5;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: white;
+  opacity: 0.5;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: white;
+  opacity: 0.5;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: white;
+  opacity: 0.5;
+}
+
+.usr-input label {
+  color: crimson;
+  opacity: 0;
+}
+.usr-input input, .usr-input textarea {
+  border-width: 0px;
+  border-bottom: 1px solid grey;
+  background: transparent;
+  resize: none;
+}
+input:focus, input:active, textarea:focus {
+  outline: none;
+  border-color: green;
+}
+.addable-label-anim {
+  /* This gets added to the labels with jQuery */
+  animation: appear-label 300ms ease forwards;
+  -webkit-animation: appear-label 300ms ease forwards;
+}
+@keyframes appear-label {
+  from {
+    opacity: 0;
+    margin-left: -20%;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+@-webkit-keyframes appear-label {
+  from {
+    opacity: 0;
+    margin-left: -20%;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+
+.room-for-submit-btn {
+  width: 100vw;
+  height: 20px;
+  background: transparent;
+}
+.center-btn {
+  width: 60px;
+  height: 100%;
+  margin: auto;
+}
+#submit-btn {
+  background: green;
+  color: white;
+  font-weight: bold;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px outset white;
+}
+#submit-btn:hover {
+  background: lime;
+  border-width: 2px;
+}
+#submit-btn:active {
+  background: lime;
+  border-style: inset;
+  border-width: 2px;
+}
+/* --------- */
+
+/*---- Footer ----*/
+footer {
+  min-height: 40px;
+  padding-top: 10px;
+  padding-right: 5px;
+  background: teal;
+}
+.no-copyright-necessary {
+  margin-left: 20px;
+  max-width: 30vw;
+  color: white;
+}
+.copyleft {
+  display: inline-block;
+  transform: rotateY(180deg);
+}
+/*--------------*/
+
+/* ---- responsive css ---- */
+@media (max-width: 767px) {
+  .content-body {
+    width: 100vw;
+    margin: 0vw !important;
+  }
+  #portfolio-carousel {
+    width: auto;
+    margin: auto;
+  }
+  .back-to-the-top {
+    display: initial;
+  }
+  #mobile-description {
+    opacity: 1;
+    height: auto;
+    margin-top: 20px;
+  }
+}
+/* --------- */
