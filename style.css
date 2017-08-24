@@ -83,15 +83,15 @@ body {
 
 /* ---- backgrounds for all the sections ---- */
 #about {
-  background: url(http://i.dailymail.co.uk/i/pix/2015/12/30/14/2FADE7B800000578-0-image-a-32_1451485652414.jpg) no-repeat;
+  background: url(photos/atmosphere.jpg) no-repeat;
   background-size: cover;
 }
 #portfolio {
-  background: url(http://allswalls.com/images/high-mountains-wallpaper-1.jpg) no-repeat;
+  background: url(photos/mountain.jpg) no-repeat;
   background-size: cover;
 }
 #contact {
-  background: url(https://wallpaperbrowse.com/media/images/bcf39e88-5731-43bb-9d4b-e5b3b2b1fdf2.jpg) no-repeat;
+  background: url(photos/forrest.jpg) no-repeat;
   background-size: cover;
 }
 /* ---------------- */
@@ -167,6 +167,8 @@ canvas {
 }
 .mario {
   border: 7px double deepskyblue;
+  width: 300px;
+  height: 300px;
 }
 /* -------- */
 
