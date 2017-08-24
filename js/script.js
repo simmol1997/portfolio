@@ -142,8 +142,15 @@ function drawIntroSpace() {
 }
 /*----- Drawing intro space*/
 
-/* checking which section the window is currently in */
 $(window).scroll(function() {
+  setTimeout(activateSectionBtn, 10); //Has to wait 10 ms because of css animation and js animation not working together
+
+  // Adds an animation class to the navbar on mobile phones
+  navbarAnimOnScroll();
+});
+
+/* checking which section the window is currently in */
+function activateSectionBtn() {
   var scrollTop = $('body').scrollTop();
 
   if((scrollTop >= $('#contact').offset().top - 10) || ($(window).scrollTop() + $(window).height() == $(document).height())) { /*Has to be -10 since the html,body scrollTop value below does not match the value given by $('body').scrollTop() $('html, body').stop().animate({ scrollTop: $(section).offset().top}, 500); */
@@ -152,13 +159,13 @@ $(window).scroll(function() {
 
     $('#contact-link').addClass('navigation-active');
   }
-  else if(scrollTop >= $('#portfolio').offset().top) {
+  else if(scrollTop >= $('#portfolio').offset().top - 10) {
     if(!$('#portfolio-link').hasClass('navigation-active'))
       $('.navigation-active').removeClass('navigation-active');
 
     $('#portfolio-link').addClass('navigation-active');
   }
-  else if(scrollTop >= $('#about').offset().top) {
+  else if(scrollTop >= $('#about').offset().top - 10) {
     if(!$('#about-link').hasClass('navigation-active'))
       $('.navigation-active').removeClass('navigation-active');
 
@@ -167,5 +174,28 @@ $(window).scroll(function() {
   else {
     $('.navigation-active').removeClass('navigation-active');
   }
-});
+}
 /* ------- */
+
+/* adds and removes an animation class to the navbar on mobile phones when scrolling */
+var prevScrollTop = $(window).scrollTop();
+function navbarAnimOnScroll() {
+  var navbar = $('.navbar');
+
+  //checks if the user is scrolling up or down
+  var currScrollTop = $(window).scrollTop();
+
+  if(prevScrollTop > currScrollTop && !navbar.hasClass('addable-appear-anim')) { //Scrolling up and does not allready have the class
+    navbar.addClass('addable-appear-anim');
+    if(navbar.hasClass('addable-disappear-anim'))
+      navbar.removeClass('addable-disappear-anim');
+  }
+  else if(prevScrollTop < currScrollTop && !navbar.hasClass('addable-disappear-anim')) {
+    navbar.addClass('addable-disappear-anim');
+    if(navbar.hasClass('addable-appear-anim'))
+      navbar.removeClass('addable-appear-anim');
+  }
+
+  prevScrollTop = currScrollTop;
+}
+/* -------- */

@@ -79,6 +79,48 @@ body {
   margin-top: 3px;
   margin-bottom: 3px;
 }
+
+/* Navbar disappearing on mobile phones when scrolling down and appearing when scrolling up */
+@keyframes navbar-disappear {
+  from {
+    opacity: 1;
+    margin-top: 0;
+  }
+  to {
+    opacity: 0;
+    margin-top: -100px;
+  }
+}
+@-webkit-keyframes navbar-disappear {
+  from {
+    opacity: 1;
+    margin-top: 0;
+  }
+  to {
+    opacity: 0;
+    margin-top: -100px;
+  }
+}
+@keyframes navbar-appear {
+  from {
+    opacity: 0;
+    margin-top: -100;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+@-webkit-keyframes navbar-appear {
+  from {
+    opacity: 0;
+    margin-top: -100;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
 /* ---------- */
 
 /* ---- backgrounds for all the sections ---- */
@@ -390,6 +432,15 @@ footer {
     opacity: 1;
     height: auto;
     margin-top: 20px;
+  }
+  /* Navbar disappearing on mobile phones when scrolling down and appearing when scrolling up */
+  .addable-appear-anim {
+    animation: navbar-appear 400ms linear forwards;
+    -webkit-animation: navbar-appear 400ms linear forwards;
+  }
+  .addable-disappear-anim {
+    animation: navbar-disappear 400ms linear forwards;
+    -webkit-animation: navbar-disappear 400ms linear forwards;
   }
 }
 /* --------- */
